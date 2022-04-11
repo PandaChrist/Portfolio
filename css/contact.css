@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("../images/black-background-lite.png"); 
+    overflow: hidden;   
+}
+.parent {
+    display: grid;
+    grid-template-columns: 0.3fr repeat(2, 1fr);
+    /* grid-template-rows: 0.3fr 1fr 0.6fr; */
+    grid-template-areas: 
+        "contact contact nav"
+        "social info form"
+        "page . ."
+    ;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .contact { 
+        /* grid-area: 1 / 1 / 2 / 2; */
+        grid-area: contact;
+     }
+
+    .contact > button{
+        background-color: #1F1F1F;
+        border-width: 0px;
+        padding: 7px  20px;
+        font-size: 14px;
+        color: #ACACAC;
+        border-radius: 30px;
+        font-family: oswald;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .parent > *{
+        padding: 20px 50px;
+    }
+    li {
+      list-style: none;
+      box-sizing: border-box;
+      flex: 1 1 0;
+      align-items: center;
+      text-align: center;
+    }
+    li > a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #ACACAC;
+        font-family: oswald;
+        padding: 0;
+
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        grid-area: nav;
+    }
+    .social { 
+        position: relative;
+        grid-area: social;
+        color: white;
+        /* grid-area: 2 / 1 / 3 / 2; */
+     }
+     .social > div{
+         position: absolute;
+         bottom: 30%;
+     }
+
+     .social > div> div{
+        margin-top: 20px;
+     }
+    .info { 
+        grid-area: info;
+        /* grid-area: 2 / 2 / 3 / 3; */
+     }
+    .info-header{
+        font-family: oswald;
+        font-size: 30px;
+        color: rgb(247, 255, 255);
+        padding-top: 40px;
+        letter-spacing: 7px;
+    }
+    .underline{
+        width: 68%;
+        height: 3px;
+        background-color: #ACACAC;
+    }
+    .icone {
+        color: rgb(255, 255, 255);
+        display: inline;
+        margin-right: 30px;
+    }
+    .item{
+        display: inline;
+    }
+    .mail, .number, .location{
+        margin: 40px;
+        color: #ACACAC;
+        font-family: nexa;
+        font-size: 15px;
+
+    }
+    .form { 
+        grid-area: form;
+        /* grid-area: 2 / 3 / 3 / 4; */
+        margin-top: 0;
+        margin-left: 0;
+        padding-top: 70px;
+        padding-left: 0;
+         }
+    input{
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 30px;
+        border-width: 0;
+        border-radius: 30px;
+        padding: 20px  20px;
+        font-size: 14px;
+        background-color: rgb(253, 253, 253);
+        box-sizing: 0px;
+        font-family: nexa;
+        
+    }
+    .page { 
+        grid-area: page;
+        /* grid-area: 3 / 1 / 4 / 2; */
+            padding-bottom: 0;
+         }
+    .page>*{
+        flex-direction: column;
+        font-family: oswald;
+        font-size: 80px;
+        color: #86FFE6;
+        padding-bottom: 0;
+        line-height: 100px;
+    }
+    .message{
+        height: 100px;
+        overflow: scroll;
+    }
+    .boutton{
+        background-color: #86FFE6;
+        border-width: 0px;
+        width: fit-content;
+        line-height: 0;
+        padding: 5px  20px;
+        font-size: 14px;
+        color: #212121;
+        border-radius: 30px;
+        font-family: oswald;
+    }
+    div > .boutton-li{
+        width: 200px;
+    }
+    .form .info-header{
+        display: none;
+    }
+
+
+
+
+    
+@media(max-width: 400px){
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: 0.3fr 1fr 0.6fr; */
+        grid-template-areas: 
+            "contact  nav"
+            "form form"
+            "info info"
+            "social social "
+            "page page"
+        ;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-height: 100vh;  
+        overflow: hidden;
+        }
+        .contact{
+            grid-area: contact;
+            padding-left: 6vw;
+        }
+        .nav{
+            grid-area: nav;
+            display: none;
+        }
+        .info .info-header{
+            display: block;
+            font-family: 14px;
+        }
+        .form .info-header{
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .info .info-header{
+            display: none;
+        }
+        .form{
+            text-align: center;
+            padding: 10px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            
+            
+        }
+        .form div{
+            padding: 0;
+            width: fit-content;
+        }
+        input{
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            height: 10px;
+            border-width: 0;
+            border-radius: 30px;
+            padding: 15px  15px;
+            font-size: 14px;
+            background-color: rgb(253, 253, 253);
+            box-sizing: 0px;
+            font-family: nexa;
+            
+        }
+        .boutton{
+            background-color: #86FFE6;
+            border-width: 0px;
+            width: fit-content;
+            height: 30px !important;
+            line-height: 0;
+            padding: 5px  20px;
+            font-size: 14px;
+            color: #212121;
+            border-radius: 30px;
+            font-family: oswald;
+            margin-left: 100%;
+        }
+        div > .boutton-li{
+            margin-right: 0;
+        }
+        .message{
+            height: 70px;
+            overflow: scroll;
+        }
+        .mail, .number, .location{
+            margin: 14px;
+            color: #ACACAC;
+            font-family: nexa;
+            font-size: 13px;
+        }
+        .info{
+            padding: 0 4vw 0 2vw;
+        }
+        .social{
+            font-family: Oswald;
+            padding: 0;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+        } 
+        .mail, .number, .location{
+            margin: 5vw;
+            color: #ACACAC;
+            font-family: nexa;
+            font-size: 13px;
+        }
+        .page>*{
+            flex-direction: column;
+            font-family: oswald;
+            font-size: 60px;
+            color: #86FFE6;
+            padding-bottom: 0;
+            line-height: 100px;
+        }
+        .page { 
+            grid-area: page;
+            /* grid-area: 3 / 1 / 4 / 2; */
+            padding-bottom: 0;
+            padding-left: 5vw;
+             }
+}

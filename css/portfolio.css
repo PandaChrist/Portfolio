@@ -1,0 +1,349 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("../images/black-background-lite.png"); 
+    overflow: hidden;   
+}
+.parent {
+    display: grid;
+    grid-template-columns: 0.6fr  1fr 1fr 1fr 0.6fr;
+    grid-template-areas: 
+    "contact contact nav nav nav"
+    "header header header header header"
+    "filter filter filter filter filter"
+    "social design1 design2 design3 page"
+    "social design4 design5 design6 page1";
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    .contact { 
+        grid-area: contact;
+     }
+    
+    .contact > button{
+        background-color: #1F1F1F;
+        border-width: 0px;
+        padding: 7px  20px;
+        font-size: 14px;
+        color: #ACACAC;
+        border-radius: 30px;
+        font-family: oswald;
+
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .parent > *{
+        padding: 20px 50px;
+    }
+    li {
+      list-style: none;
+      box-sizing: border-box;
+      flex: 1 1 0;
+      align-items: center;
+      text-align: center;
+    }
+    li > a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #ACACAC;
+        font-family: oswald;
+        padding: 0;
+
+    }
+    .nav{
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+    }
+
+    .header { 
+        grid-area: header;
+     }
+    .header{
+        font-family: oswald;
+        font-size: 50px;
+        color: #ACACAC;
+        text-align: center;
+        letter-spacing: 20px;
+        font-weight: bold;
+        margin-top: 2%;
+    }
+    .header>p{
+        border: #ACACAC;
+        border-style: solid;
+        border-width: 1px ;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .filter { 
+        grid-area: filter;
+        font-family: nexa;
+        display: flex;
+     }
+    .filter > *{
+        flex: 1 1 0;
+        text-align: center;
+        color: #ACACAC;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .social { 
+        position: relative;
+        grid-area: social;
+        color: white;
+     }
+     .social > div{
+        position: absolute;
+        bottom: 40%;
+    }
+    .social > div> div{
+        margin-top: 20px;
+     }
+    .design1 { 
+        grid-area: design1;
+        background-color: chartreuse;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+     }
+    .design2 { 
+        grid-area: design2;
+        background-color: coral;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+
+     }
+    .design3 { 
+        grid-area: design3;
+        background-color: darkgoldenrod;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+     }
+    .design4 { 
+        grid-area: design4;
+        background-color: bisque;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+     }
+    .design5 { 
+        grid-area: design5;
+        background-color: darksalmon;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+     }
+    .design6 { 
+        grid-area: design6;
+        background-color: hotpink;
+        margin: 10px;
+        height: 155px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: nexa;
+        color: rgb(247, 255, 255);
+        font-weight: bolder;
+        letter-spacing: 2px;
+     }
+    .page { 
+        grid-area: page1;
+        position: relative;
+        font-family: oswald;
+        font-size: 80px;
+        color: #86FFE6;
+        padding-top: 0;
+        margin-top: 0;
+        height: fit-content;
+
+     }
+     .page > p{
+        position: absolute;
+        height: fit-content;
+        bottom: -800%;
+
+    }
+
+
+
+
+@media(max-width: 400px){
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas: 
+        "contact  nav"
+        "header  header"
+        "filter  filter"
+        "design1 design1"
+        "design2 design2"
+        "design3 design3"
+        "design4 design4"
+        "design5 design5"
+        "design6 design6"
+        "social social"
+        "page page";
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-height: 100vh;
+        overflow: hidden;
+        z-index: 1;
+        }
+        .contact{
+            grid-area: contact;
+            padding-left: 4vw;
+        }
+        .nav{
+            grid-area: nav;
+            display: none;
+        }
+        .header{
+            grid-area: header;
+            font-size: 24px;
+            letter-spacing: 10px;
+            text-align: center;
+            padding: 0;
+        }
+        .header>p{
+            border: #ACACAC;
+            border-style: solid;
+            border-width: 1px ;
+            margin-left: 6vw;
+            margin-right: 6vw;
+        }
+        .filter{
+            grid-area: filter;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .filter > *{
+            font-size: 10px;
+            width: fit-content
+        }
+        .design1{
+            grid-area: design1;
+        }
+        .design2{
+            grid-area: design2;
+        }
+        .design3{
+            grid-area: design3;
+        }
+        .design4{
+            grid-area: design4;
+        }
+        .design5{
+            grid-area: design5;
+        }
+        .design6{
+            grid-area: design6;
+        }
+        .design1 { 
+            background-color: rgb(29, 252, 148);
+            margin: 2vw;
+            height: 20vh;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+         }
+        .design2 { 
+            grid-area: design2;
+            background-color: coral;
+            margin: 2vw;
+            height: 20vh;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+    
+         }
+        .design3 { 
+            grid-area: design3;
+            background-color: darkgoldenrod;
+            margin: 10px;
+            height: 155px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+         }
+        .design4 { 
+            grid-area: design4;
+            background-color: bisque;
+            margin: 10px;
+            height: 155px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+         }
+        .design5 { 
+            grid-area: design5;
+            background-color: darksalmon;
+            margin: 10px;
+            height: 155px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+         }
+        .design6 { 
+            grid-area: design6;
+            background-color: hotpink;
+            margin: 10px;
+            height: 155px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: nexa;
+            color: rgb(247, 255, 255);
+            font-weight: bolder;
+            letter-spacing: 2px;
+         }
+}

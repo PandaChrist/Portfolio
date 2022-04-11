@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("../images/black-background-lite.png"); 
+    overflow: hidden;   
+}
+.parent {
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 0.3fr 0.5fr;
+    grid-template-areas:
+    "contact contact nav nav"
+    "social skills skills moi"
+    "page page page moi";
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .contact { 
+        grid-area: contact;
+     }
+
+     .contact > button{
+        background-color: #1F1F1F;
+        border-width: 0px;
+        padding: 7px  20px;
+        font-size: 14px;
+        color: #ACACAC;
+        border-radius: 30px;
+        font-family: oswald;
+
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .parent > *{
+        padding: 20px 50px;
+    }
+    li {
+      list-style: none;
+      box-sizing: border-box;
+      flex: 1 1 0;
+      align-items: center;
+      text-align: center;
+    }
+    li > a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #ACACAC;
+        font-family: oswald;
+        padding: 0;
+
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+    }
+
+
+    .nav { 
+        grid-area: nav;
+     }
+    .social { 
+        position: relative;
+        grid-area: social;
+        color: white;
+     }
+    .social > div{
+        position: absolute;
+        bottom: 40%;
+    }
+    .social > div> div{
+        margin-top: 20px;
+     }
+    .skills { 
+        grid-area: skills; 
+        padding-left: 0;
+        margin-top: 10px;
+        padding-right: 0;
+        padding-bottom: 0;
+        line-height: 20px;
+    }
+    .skills-header{
+        font-family: oswald;
+        font-size: 25px;
+        color: rgb(247, 255, 255);
+        padding-top: 30px;
+        letter-spacing: 5px;
+    }
+    .skills p{
+        color: #ACACAC;
+        margin-top: 20px;
+        font-family: nexa;
+    }
+    .percent{
+        font-family: oswald;
+        font-size: 15px;
+        margin-bottom: 0px;
+        padding-bottom: 3px;
+        padding-top: 10px;
+        color: #ACACAC;
+    }
+    .barre-description{
+        display: flex;
+    }
+    .barre{
+        width: 500px;
+        height: 2px;
+        background-color: #ACACAC;
+    }
+    .barre::after{
+        position: absolute;
+        content: "";
+        width: 30%;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+
+    }
+    .js:hover::after{
+        position: absolute;
+        content: "";
+        width: 470px;
+        height: 2px;
+        background-color: rgb(21, 168, 168);
+        transition: background-color 2s ease-in-out, width 0.3s ease-in-out;
+
+    }
+
+    .js::after{
+        position: absolute;
+        content: "";
+        width: 470px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .react::after{
+        position: absolute;
+        content: "";
+        width: 460px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .php::after{
+        position: absolute;
+        content: "";
+        width: 480px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .laravel::after{
+        position: absolute;
+        content: "";
+        width: 480px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .python::after{
+        position: absolute;
+        content: "";
+        width: 400px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .html::after{
+        position: absolute;
+        content: "";
+        width: 490px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .xd::after{
+        position: absolute;
+        content: "";
+        width: 480px;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+    }
+    .description{
+        line-height: 0;
+        padding-left: 5px;
+        font-size: 15px;
+        font-family: nexa;
+        color: #ACACAC;
+        
+    }
+    .page { 
+        grid-area: page;
+        flex-direction: column;
+        font-family: oswald;
+        font-size: 80px;
+        color: #86FFE6;
+        padding-bottom: 0;
+        line-height: 30px;
+        padding-top: 0;
+        margin-top: 0;
+        height: fit-content;
+     }
+     .page > p{
+         height: fit-content;
+     }
+    .moi { 
+        height: 100%;
+        grid-area: moi;
+        overflow: hidden;
+        padding-bottom: 0;
+        margin-bottom: 0px;
+        line-height: -500px;
+    }
+    .moi > img{
+        width: 450px;
+        height: auto;
+        margin-left: 100px;
+        line-height: 0;
+        align-content: center;
+    }
+    .img-moi{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+@media(max-width: 400px){
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "contact nav"
+        "skills skills"
+        "social social"
+        "page ."
+        ;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-height: 100vh;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .moi{
+        display: none;
+        z-index: 3;
+    }
+    .contact{
+        grid-area: contact;
+        padding-left: 4%;
+        z-index: 3;
+    }
+    .nav{
+        grid-area: nav;
+        display: none;
+        z-index: 3;
+    }
+    .skills{
+        grid-area: skills;
+        z-index: 3;
+    }
+    .social{
+        grid-area: social;
+        z-index: 3;
+    }
+    .page{
+        grid-area: page;
+        margin-bottom: 100%;
+        z-index: 3;
+    }
+    .skills-header{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        width: auto;
+        padding: 0 4% 0 4%;
+        z-index: 3;
+    }
+    .skills p{
+        padding: 4%;
+        font-size: 14px;
+        text-align: center;
+        z-index: 3;
+    }
+    .barre{
+        width: 70vw;
+        height: 2px;
+        background-color: #ACACAC;
+        z-index: 3;
+    }
+    .barre::after{
+        position: absolute;
+        content: "";
+        width: 30%;
+        height: 2px;
+        background-color: rgb(247, 255, 255);
+        z-index: 3;
+    }
+    .percent, .description{
+        font-size: 12px;
+        z-index: 3;
+    }
+    .item{
+        padding: 4%;
+        z-index: 3;
+    }
+    .js::after{
+        width: 63vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .react::after{
+        width: 62.3vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .php::after{
+        width: 64.4vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .laravel::after{
+        width: 64.4vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .python::after{
+        width: 49vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .html::after{
+        width: 69.3vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .xd::after{
+        width: 65.5vw;
+        height: 2px;
+        z-index: 3;
+    }
+    .page p{
+        width: fit-content;
+        margin: 8vh 0 0 0vw;
+        z-index: 3;
+    }
+    .page{
+        padding-left: 4vw;
+        z-index: 3;
+    }
+    .img-moi{
+        display: block;
+        z-index: 2;
+    } 
+    .img-moi img{
+        position: absolute;
+        height: 70vh;
+        width: auto;
+        margin-left: 40vw;
+    }
+}
